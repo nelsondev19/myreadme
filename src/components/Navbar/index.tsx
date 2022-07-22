@@ -10,7 +10,7 @@ function Navbar(): JSX.Element {
       className="sticky-navbar"
     >
       <nav className="navbar">
-        <div className="text-title">MYREAD.ME</div>
+        <div className="text-title">MYREADME</div>
         <div>
           <button className="btn-share-twitter">
             <svg

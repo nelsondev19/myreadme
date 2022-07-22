@@ -9,10 +9,6 @@
   padding: 0.5rem;
   justify-content: center;
 }
-.grid-svg {
-  display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-}
 
 /* MENU */
 
@@ -30,7 +26,7 @@
 }
 
 .hover-box-menu > svg {
-  fill: #7E7E7E;
+  fill: #7e7e7e;
 }
 .hover-box-menu:hover > svg {
   fill: #ffffff;

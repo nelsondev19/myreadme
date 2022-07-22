@@ -26,18 +26,20 @@ function SubMenu(): JSX.Element {
   if (ShowMenu) {
     return (
       <div className="submenu-box bg-menu">
-        <p className="text-info">
-          Click on a section below to add it to your README file
-        </p>
-        {options.map((option) => (
-          <div
-            onClick={() => setTemplate(option.value)}
-            key={option.title}
-            className="card-option"
-          >
-            {option.title}
-          </div>
-        ))}
+        <div className="scroll-sub-menu">
+          <p className="text-info">
+            Click on a section below to add it to your README file
+          </p>
+          {options.map((option) => (
+            <div
+              onClick={() => setTemplate(option.value)}
+              key={option.title}
+              className="card-option"
+            >
+              {option.title}
+            </div>
+          ))}
+        </div>
       </div>
     );
   }

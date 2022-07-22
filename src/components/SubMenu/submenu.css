@@ -25,3 +25,21 @@
   border-radius: 4px;
   color: #bfc2cb;
 }
+
+/* SCROLL  SUBMENU */
+.scroll-sub-menu {
+  overflow: scroll;
+  height: 100%;
+  overflow-x: hidden;
+  transition: 1s;
+}
+.scroll-sub-menu::-webkit-scrollbar {
+  width: 10px;
+  border: solid 1px;
+  border-left-color: #5b6168;
+}
+
+/* Handle on hover */
+.scroll-sub-menu::-webkit-scrollbar-thumb:hover {
+  background: rgb(75 85 99 / 1);
+}

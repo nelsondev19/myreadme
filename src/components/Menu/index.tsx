@@ -12,7 +12,7 @@ function Menu(): JSX.Element {
     SubMenuContext
   ) as SubMenuContextType;
 
-  const { changeEditor, refRender } = useContext(
+  const { changeEditor, refRender, Markdown } = useContext(
     EditorContext
   ) as EditorContextType;
 
@@ -29,6 +29,15 @@ function Menu(): JSX.Element {
       e.preventDefault();
       changeEditor(refRender, e.target?.result as string);
     };
+  };
+
+  const downloadReadme = () => {
+    const url = window.URL.createObjectURL(new Blob([Markdown]));
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute("download", "README.md"); //or any other extension
+    document.body.appendChild(link);
+    link.click();
   };
 
   return (
@@ -71,14 +80,22 @@ function Menu(): JSX.Element {
         </svg>
       </div>
       <br />
-      <div title="Download README.md" className="figure-svg hover-box-menu">
+      <div
+        onClick={downloadReadme}
+        title="Download README.md"
+        className="figure-svg hover-box-menu"
+      >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" height="30">
           <path d="M7.707 10.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V6h5a2 2 0 012 2v7a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2h5v5.586l-1.293-1.293zM9 4a1 1 0 012 0v2H9V4z" />
         </svg>
       </div>
 
       <br />
-      <div title="Clear JSON" className="figure-svg hover-box-menu">
+      <div
+        onClick={() => changeEditor(refRender, "")}
+        title="Clear JSON"
+        className="figure-svg hover-box-menu"
+      >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" height="30">
           <path
             fillRule="evenodd"

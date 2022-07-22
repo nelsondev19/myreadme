@@ -57,3 +57,18 @@ div {
 .cursor-pointer {
   cursor: pointer;
 }
+
+table,
+td,
+th {
+  border: 1px solid #dfe2e5;
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+td > code {
+  background: #e8ebef;
+  border-radius: 10px;
+  padding: 4px;
+  color: #3E2C2F;
+}

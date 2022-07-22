@@ -62,6 +62,7 @@ function Menu(): JSX.Element {
         id="file-input"
         style={{ display: "none" }}
         onChange={changeInput}
+        accept=".md"
       />
       <div
         onClick={() => {

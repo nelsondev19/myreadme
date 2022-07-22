@@ -1,0 +1,27 @@
+.submenu-box {
+  position: fixed;
+  width: 13rem;
+  height: 100%;
+  margin-left: 4rem;
+}
+
+/* MENU */
+
+.card-option {
+  width: auto;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 10px;
+  background: #8609c9;
+  color: white;
+  cursor: pointer;
+}
+.card-option:hover {
+  background: #52047c;
+}
+
+.text-info {
+  padding: 10px;
+  border-radius: 4px;
+  color: #bfc2cb;
+}

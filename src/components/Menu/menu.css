@@ -1,0 +1,37 @@
+.menu-box {
+  position: fixed;
+  width: 4rem;
+  height: 100%;
+}
+
+.figure-svg {
+  display: flex;
+  padding: 0.5rem;
+  justify-content: center;
+}
+.grid-svg {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+/* MENU */
+
+.bg-menu {
+  background: #000000;
+  border-right: 1px solid #5b6168;
+}
+
+.hover-box-menu-active,
+.hover-box-menu {
+  cursor: pointer;
+}
+.hover-box-menu-active > svg {
+  fill: #ffffff;
+}
+
+.hover-box-menu > svg {
+  fill: #7E7E7E;
+}
+.hover-box-menu:hover > svg {
+  fill: #ffffff;
+}

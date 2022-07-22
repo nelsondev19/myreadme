@@ -1,0 +1,43 @@
+.sticky-navbar {
+  position: sticky;
+  top: 0;
+  background: #000000;
+  border-bottom: 1px solid #5b6168;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  color: #ffffff;
+  border-width: 1px;
+  padding: 0.3rem;
+}
+
+.btn-share-twitter {
+  display: inline-flex;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: #6366f1;
+  color: #ffffff;
+  font-weight: 700;
+  align-items: center;
+  border-radius: 0.25rem;
+  fill: #ffffff;
+  border: 0;
+  cursor: pointer;
+  margin: 0.2rem;
+}
+
+.btn-share-twitter:hover {
+  background-color: #2e30b1;
+}
+
+.text-title {
+  font-size: medium;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

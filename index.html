@@ -4,12 +4,19 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="dracula.min.css" />
-    <link rel="stylesheet" href="/highlightjs-copy.min.css" />
+    <link rel="preload" as="style" href="dracula.min.css" />
+    <link rel="preload" as="style" href="/highlightjs-copy.min.css" />
+
+    <meta
+      name="description"
+      content="Simple editor to add sections to your README.md file by NelsonCode"
+    />
+    <meta name="twitter:title" content="myread.me" />
+    <meta property="og:title" content="myreadme" />
     <title>myreadme</title>
   </head>
   <body>
-    <div id="root"></div> 
+    <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
     <script src="/highlightjs-copy.min.js"></script>
   </body>

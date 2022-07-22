@@ -1,20 +1,28 @@
+import { Suspense, lazy } from "react";
 import "./index.css";
-import Menu from "./components/Menu";
-import SubMenu from "./components/SubMenu";
 import { SubMenuProvider } from "./context/SubMenu";
-import Home from "./routes/Home";
 import { EditorProvider } from "./context/Editor";
-import Navbar from "./components/Navbar";
+
+const Navbar = lazy(() => import("./components/Navbar"));
+const Menu = lazy(() => import("./components/Menu"));
+const Home = lazy(() => import("./routes/Home"));
+const SubMenu = lazy(() => import("./components/SubMenu"));
 
 function App() {
   return (
     <>
       <EditorProvider>
         <SubMenuProvider>
-          <Navbar />
+          <Suspense fallback={<div>Loading...</div>}>
+            <Navbar />
+          </Suspense>
           <Menu />
-          <SubMenu />
-          <Home />
+          <Suspense fallback={<div>Loading...</div>}>
+            <SubMenu />
+          </Suspense>
+          <Suspense fallback={<div>Loading...</div>}>
+            <Home />
+          </Suspense>
         </SubMenuProvider>
       </EditorProvider>
     </>

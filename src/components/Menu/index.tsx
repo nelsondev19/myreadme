@@ -1,12 +1,35 @@
 import "./menu.css";
-import { useContext } from "react";
+import { useContext, useRef, ChangeEvent } from "react";
+
+// CONTEXT
 import SubMenuContext from "../../context/SubMenu";
 import { SubMenuContextType } from "../../context/SubMenu/types";
+import EditorContext from "../../context/Editor";
+import { EditorContextType } from "../../context/Editor/types";
 
 function Menu(): JSX.Element {
   const { setShowMenu, ShowMenu } = useContext(
     SubMenuContext
   ) as SubMenuContextType;
+
+  const { changeEditor, refRender } = useContext(
+    EditorContext
+  ) as EditorContextType;
+
+  const refInput = useRef(null);
+
+  const changeInput = (e: ChangeEvent<HTMLInputElement>) => {
+    // @ts-ignore
+    const file = e.target.files[0];
+
+    //convierto la imagen en url para poder mostrarla en la interfaz
+    const reader = new FileReader();
+    reader.readAsText(file);
+    reader.onload = (e) => {
+      e.preventDefault();
+      changeEditor(refRender, e.target?.result as string);
+    };
+  };
 
   return (
     <div className="menu-box bg-menu">
@@ -23,7 +46,22 @@ function Menu(): JSX.Element {
         </svg>
       </div>
       <br />
-      <div title="Add README.md" className="figure-svg hover-box-menu">
+      <input
+        ref={refInput}
+        type="file"
+        name="file-input"
+        id="file-input"
+        style={{ display: "none" }}
+        onChange={changeInput}
+      />
+      <div
+        onClick={() => {
+          // @ts-ignore
+          refInput.current.click();
+        }}
+        title="Add README.md"
+        className="figure-svg hover-box-menu"
+      >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" height="30">
           <path
             fillRule="evenodd"
@@ -50,7 +88,7 @@ function Menu(): JSX.Element {
         </svg>
       </div>
 
-      <div title="Clear JSON" className="figure-svg">
+      <div title="GitHub" className="figure-svg">
         <div
           style={{
             color: "white",

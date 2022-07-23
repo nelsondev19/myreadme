@@ -7,11 +7,11 @@ on:
 env:
   DOCKER_USER: ${{ secrets.DOCKER_USERNAME }}
   DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+  DOCKER_IMAGE_NAME: myreadme
 
 jobs:
   publish:
     runs-on: ubuntu-latest
-    needs: test
     steps:
       - uses: actions/checkout@v2
       - name: DOCKER LOGIN
@@ -21,14 +21,14 @@ jobs:
         run: npm i && npm run build
 
       - name: BUILD IMAGE WITH COMMIT SHA
-        run: docker build . -t ${{ env.DOCKER_USER }}/docker-app:${{ github.sha }}
+        run: docker build . -t ${{ env.DOCKER_USER }}/${{ env.DOCKER_IMAGE_NAME }}:${{ github.sha }}
 
       - name: RETAG IMAGE LATEST WITH DIGEST FROM PREVIOUS IMAGE
         run: |
-          IMAGE_ID=$(docker images | grep $DOCKER_REGISTRY\/$APP_NAME | head -n1 | awk '{print $3}')
-          docker tag $IMAGE_ID ${{ env.DOCKER_USER }}/docker-app:latest
+          IMAGE_ID=$(docker images | grep $DOCKER_REGISTRY\/${{ env.DOCKER_IMAGE_NAME }} | head -n1 | awk '{print $3}')
+          docker tag $IMAGE_ID ${{ env.DOCKER_USER }}/${{ env.DOCKER_IMAGE_NAME }}:latest
 
       - name: PUSH IMAGE LATEST AND COMMIT SHA
         run: |
-          docker push ${{ env.DOCKER_USER }}/docker-app:${{ github.sha }}
-          docker push ${{ env.DOCKER_USER }}/docker-app:latest
+          docker push ${{ env.DOCKER_USER }}/${{ env.DOCKER_IMAGE_NAME }}:${{ github.sha }}
+          docker push ${{ env.DOCKER_USER }}/${{ env.DOCKER_IMAGE_NAME }}:latest

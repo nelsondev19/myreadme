@@ -1,4 +1,4 @@
-FROM node:16.16.0-alpine3.15
+FROM node:18.6.0-alpine
 
 WORKDIR /app
 
@@ -6,7 +6,7 @@ COPY . /app
 
 ENV NODE_ENV=production
 
-RUN npm i -g npm@8.15.0
+RUN npm i --location=global serve@14.0.1
 
 RUN npm i --omit=dev
 

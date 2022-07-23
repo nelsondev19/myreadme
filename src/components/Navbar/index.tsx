@@ -12,7 +12,10 @@ function Navbar(): JSX.Element {
       <nav className="navbar">
         <div className="text-title">MYREADME</div>
         <div>
-          <button className="btn-share-twitter">
+          <a
+            href="https://twitter.com/intent/tweet?text=Create%20your%20file%20README.md%20with%20https://www.myread.me%20created%20by%20@nelsoncode_dev%20%F0%9F%9A%80"
+            className="btn-share-twitter"
+          >
             <svg
               width="17px"
               height="17px"
@@ -36,7 +39,7 @@ function Navbar(): JSX.Element {
             </svg>
 
             <span>Share on Twitter</span>
-          </button>
+          </a>
         </div>
       </nav>
     </header>

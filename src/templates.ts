@@ -96,6 +96,39 @@ const license = `License
 MIT License © ${new Date().getFullYear()} NelsonCode
 `;
 
+const table = `# Table
+
+| Song            | Artist                 | Year |
+| :-------------- | :--------------------- | :----|
+| Moscow Mule	    | Bad Bunny              | 2022 | 
+| Stars           | Malcolm Lockyer	       | 1961 |
+| Shining Star	  | Earth, Wind, and Fire  | 1975 |
+
+`;
+
+const contributing = `# Contributing
+We appreciate all contributions and thank all the contributors!
+
+[![Contributing](https://contrib.rocks/image?repo=microsoft/vscode)](https://github.com/microsoft/vscode/graphs/contributors)`;
+
+const codeSnippet =
+  "# Code Snippet" +
+  "\n" +
+  "```typescript" +
+  "\n" +  
+  `// Named function
+function add(x, y) {
+  return x + y;
+}
+   
+  // Anonymous function
+let myAdd = function (x, y) {
+  return x + y;
+};` +
+  "\n" +
+  "```";
+
+
 export const options = [
   {
     title: "Title and Description",
@@ -111,7 +144,7 @@ export const options = [
   },
   {
     title: "Table",
-    value: "",
+    value: table,
   },
   {
     title: "FAQ",
@@ -127,7 +160,7 @@ export const options = [
   },
   {
     title: "Contributing",
-    value: "",
+    value: contributing,
   },
   {
     title: "License",
@@ -135,7 +168,7 @@ export const options = [
   },
   {
     title: "Code Snippet",
-    value: "",
+    value: codeSnippet,
   },
   {
     title: "Installation",

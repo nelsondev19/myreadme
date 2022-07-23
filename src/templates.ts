@@ -115,7 +115,7 @@ const codeSnippet =
   "# Code Snippet" +
   "\n" +
   "```typescript" +
-  "\n" +  
+  "\n" +
   `// Named function
 function add(x, y) {
   return x + y;
@@ -127,7 +127,6 @@ let myAdd = function (x, y) {
 };` +
   "\n" +
   "```";
-
 
 export const options = [
   {
@@ -149,10 +148,6 @@ export const options = [
   {
     title: "FAQ",
     value: faq,
-  },
-  {
-    title: "Badges",
-    value: "",
   },
   {
     title: "Status Badges",

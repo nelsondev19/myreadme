@@ -14,12 +14,10 @@
     "highlight.js": "11.6.0",
     "react-monaco-editor": "0.49.0",
     "marked": "4.0.18",
-    "@tauri-apps/api": "^1.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@tauri-apps/cli": "^1.0.5",
     "@types/marked": "4.0.3",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",

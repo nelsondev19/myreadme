@@ -39,7 +39,7 @@ function Home() {
       <section
         className="content"
         style={{
-          marginLeft: ShowMenu ? "17rem" : "4rem",
+          marginLeft: ShowMenu ? "19rem" : "4rem",
         }}
       >
         <Editor

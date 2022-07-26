@@ -28,6 +28,9 @@ const contributing =
 const codeSnippet =
   "\n\n\n\n# Code Snippet\n```typescript\n// Named function\nfunction add(x, y) {\n  return x + y;\n}\n   \n  // Anonymous function\nlet myAdd = function (x, y) {\n  return x + y;\n};\n```";
 
+const features =
+  "\n# ⚡️ Features\n\n✅  Search in Editor\n\n✅  Download README.md file\n\n✅  Upload README.md file\n\n✅  Docker version\n\n✅  Friendly UI\n\n❌  Light Mode\n";
+
 export const options = [
   {
     title: "Title and Description",
@@ -72,5 +75,9 @@ export const options = [
   {
     title: "Support",
     value: support,
+  },
+  {
+    title: "Features",
+    value: features,
   },
 ];

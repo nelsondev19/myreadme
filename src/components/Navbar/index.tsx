@@ -13,7 +13,7 @@ function Navbar(): JSX.Element {
         <div className="text-title">MYREADME</div>
         <div>
           <a
-            href="https://twitter.com/intent/tweet?text=Create%20your%20file%20README.md%20with%20https://www.myread.me%20created%20by%20@nelsoncode_dev%20%F0%9F%9A%80"
+            href="https://twitter.com/intent/tweet?text=%22Create%20your%20file%20README%20.md%20with%20https://www.myread.me%20created%20by%20@nelsoncode_dev%20%F0%9F%9A%80%22"
             className="btn-share-twitter"
           >
             <svg

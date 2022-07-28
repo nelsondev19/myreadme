@@ -1,5 +1,4 @@
 import { Suspense, lazy } from "react";
-import "./index.css";
 import { SubMenuProvider } from "./context/SubMenu";
 import { EditorProvider } from "./context/Editor";
 

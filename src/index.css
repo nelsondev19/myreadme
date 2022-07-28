@@ -34,7 +34,6 @@ div {
   min-height: 100vh;
   min-width: 100vw;
   position: relative;
-  
 }
 
 .content {
@@ -73,4 +72,21 @@ td > code {
   border-radius: 10px;
   padding: 4px;
   color: #3e2c2f;
+}
+.title-device-mobile {
+  color: #828488;
+  font-weight: 600;
+  font-size: 60px;
+}
+
+.text-device-mobile {
+  color: #828488;
+  font-size: 16px;
+}
+
+.grid-device-mobile {
+  text-align: center;
+  display: grid;
+  height: 100vh;
+  place-content: center;
 }

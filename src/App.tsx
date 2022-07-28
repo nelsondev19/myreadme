@@ -9,6 +9,19 @@ const Home = lazy(() => import("./routes/Home"));
 const SubMenu = lazy(() => import("./components/SubMenu"));
 
 function App() {
+  const isMobile = navigator.userAgent.includes("Mobile");
+
+  if (isMobile) {
+    return (
+      <div className="grid-device-mobile">
+        <h1 className="title-device-mobile">¡Oh no!</h1>
+        <br />
+        <p className="text-device-mobile">
+          This app is not compatible with your device
+        </p>
+      </div>
+    );
+  }
   return (
     <>
       <EditorProvider>

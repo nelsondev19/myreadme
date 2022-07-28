@@ -47,6 +47,7 @@ function Home() {
             minimap: {
               enabled: false,
             },
+            fontSize: 19.2,
           }}
           height="93vh"
           width={"50%"}

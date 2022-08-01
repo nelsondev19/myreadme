@@ -9,8 +9,17 @@ Customize your README.md file with ready-to-use sections in a simple way with th
 
 ## Docker version
 
+### [Docker Hub](https://hub.docker.com/r/nelsoncode/myreadme)
+
  ```bash
 docker run -p 7000:3000 nelsoncode/myreadme:latest
+```
+
+
+### [GitHub Container Registry](https://github.com/users/nelsondev19/packages/container/package/myreadme)
+
+ ```bash
+docker run -p 7000:3000 ghcr.io/nelsondev19/myreadme:latest
 ```
 
 ## ⚡️ Features

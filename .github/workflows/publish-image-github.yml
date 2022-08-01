@@ -38,4 +38,5 @@ jobs:
           context: .
           push: true
           tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
 # OFFICIAL REFERENCE -> https://docs.github.com/en/actions/publishing-packages/publishing-docker-images

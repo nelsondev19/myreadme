@@ -1,8 +1,6 @@
 name: Publish Docker image to GitHub
 
-on:
-  release:
-    types: [published]
+on: [push]
 
 env:
   REGISTRY: ghcr.io
@@ -38,5 +36,4 @@ jobs:
           context: .
           push: true
           tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
 # OFFICIAL REFERENCE -> https://docs.github.com/en/actions/publishing-packages/publishing-docker-images

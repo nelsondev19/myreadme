@@ -1,4 +1,4 @@
-import { createContext, useState, ReactNode, useRef } from "react";
+import { createContext, useState, ReactNode, useRef, useEffect } from "react";
 import { marked } from "marked";
 import hljs from "highlight.js";
 
@@ -12,7 +12,11 @@ interface Props {
   children: ReactNode;
 }
 export function EditorProvider({ children }: Props) {
-  const [Markdown, setMarkdown] = useState("# Hello!");
+  const dataLocalStorage = localStorage.getItem("markdownData");
+  const InitialState =
+    dataLocalStorage === null ? "# Hello!" : dataLocalStorage;
+
+  const [Markdown, setMarkdown] = useState(InitialState);
 
   const [CurrentLine, setCurrentLine] = useState(0);
 
@@ -45,7 +49,10 @@ export function EditorProvider({ children }: Props) {
       setCurrentLine(event.changes[0].range.startLineNumber);
     }
   };
-
+  // SAVE DATA IN LOCALSTORAGE
+  useEffect(() => {
+    window.localStorage.setItem("markdownData", Markdown);
+  }, [Markdown]);
   return (
     <Context.Provider
       value={{

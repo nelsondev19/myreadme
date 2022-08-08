@@ -23,7 +23,7 @@ function Home() {
     changeEditor(refRender, Markdown);
   }, []);
 
-  const onmounttest = (_: any, monaco: Monaco) => {
+  const onMountConfigsEditor = (_: any, monaco: Monaco) => {
     monaco.editor.defineTheme("vs-dark", {
       base: "vs-dark",
       inherit: true,
@@ -55,7 +55,7 @@ function Home() {
           defaultLanguage="markdown"
           value={Markdown}
           onChange={(value, ev) => changeEditor(refRender, value, ev)}
-          onMount={onmounttest}
+          onMount={onMountConfigsEditor}
         />
         <div ref={refRender} className="rendered-html" id="html" />
       </section>

@@ -1,6 +1,7 @@
 import { Suspense, lazy } from "react";
 import { SubMenuProvider } from "./context/SubMenu";
 import { EditorProvider } from "./context/Editor";
+import IsMobile from "./components/IsMobile";
 
 const Navbar = lazy(() => import("./components/Navbar"));
 const Menu = lazy(() => import("./components/Menu"));
@@ -10,17 +11,7 @@ const SubMenu = lazy(() => import("./components/SubMenu"));
 function App() {
   const isMobile = navigator.userAgent.includes("Mobile");
 
-  if (isMobile) {
-    return (
-      <div className="grid-device-mobile">
-        <h1 className="title-device-mobile">¡Oh no!</h1>
-        <br />
-        <p className="text-device-mobile">
-          This app is not compatible with your device
-        </p>
-      </div>
-    );
-  }
+  if (isMobile) return <IsMobile />;
   return (
     <>
       <EditorProvider>

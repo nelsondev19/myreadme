@@ -11,8 +11,8 @@
   "dependencies": {
     "@monaco-editor/react": "4.4.5",
     "highlight.js": "11.6.0",
-    "react-monaco-editor": "0.49.0",
-    "marked": "4.0.18",
+    "react-monaco-editor": "0.50.1",
+    "marked": "4.0.19",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
@@ -22,6 +22,6 @@
     "@types/react-dom": "18.0.6",
     "@vitejs/plugin-react": "2.1.0",
     "typescript": "4.7.4",
-    "vite": "3.0.4"
+    "vite": "3.0.9"
   }
 }

@@ -31,4 +31,4 @@ docker run -p 7000:3000 ghcr.io/nelsondev19/myreadme:latest
 
 ### License
 
-MIT License | Nelson Hernández
+MIT License | [Nelson Hernández](https://github.com/nelsondev19)

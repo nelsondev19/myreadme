@@ -7,7 +7,7 @@ Customize your README.md file with ready-to-use sections in a simple way with th
 ![Screenshot myreadme](public/screenshot.png)
 
 
-## Docker version
+## Docker Container
 
 ### [Docker Hub](https://hub.docker.com/r/nelsoncode/myreadme)
 
@@ -24,9 +24,8 @@ docker run -p 7000:3000 ghcr.io/nelsondev19/myreadme:latest
 
 ## ⚡️ Features
 * Search in Editor
-* Download README.md file
-* Upload README.md file
-* Docker version
+* Download and Upload README.md file
+* Docker Container
 * Friendly UI
 * Dark Mode
 

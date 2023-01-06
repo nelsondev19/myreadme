@@ -6,6 +6,9 @@ Customize your README.md file with ready-to-use sections in a simple way with th
 
 ![Screenshot myreadme](public/screenshot.png)
 
+<br/>
+<a href="https://www.producthunt.com/posts/myreadme?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-myreadme" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=373963&theme=dark" alt="myreadme - Minimalist&#0032;markdown&#0032;editor | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+
 
 ## Docker Container
 

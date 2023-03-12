@@ -5,7 +5,7 @@ import IsMobile from "./components/IsMobile";
 
 const Navbar = lazy(() => import("./components/Navbar"));
 const Menu = lazy(() => import("./components/Menu"));
-const Home = lazy(() => import("./routes/Home"));
+const Home = lazy(() => import("./routes/Home"));   
 const SubMenu = lazy(() => import("./components/SubMenu"));
 
 function App() {

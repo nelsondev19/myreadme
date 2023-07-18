@@ -12,16 +12,16 @@
     "@monaco-editor/react": "4.5.1",
     "marked": "5.1.0",
     "highlight.js": "11.8.0",
-    "react-monaco-editor": "0.52.0",
+    "react-monaco-editor": "0.53.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
     "@types/marked": "5.0.0",
-    "@types/react": "18.2.7",
+    "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
     "@vitejs/plugin-react": "2.2.0",
-    "typescript": "5.0.4",
+    "typescript": "5.1.6",
     "vite": "3.1.4"
   }
 }

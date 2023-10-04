@@ -17,8 +17,8 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@types/marked": "5.0.1",
-    "@types/react": "18.2.18",
+    "@types/marked": "6.0.0",
+    "@types/react": "18.2.24",
     "@types/react-dom": "18.2.9",
     "@vitejs/plugin-react": "4.0.4",
     "typescript": "5.2.2",

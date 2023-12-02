@@ -1,14 +1,20 @@
-FROM node:20.8.0-alpine3.17
+FROM node:20.10-alpine3.17
 
 WORKDIR /app
 
-COPY . /app
+COPY --link package-lock.json package.json ./
 
-ENV NODE_ENV=production
+RUN npm install --omit=dev
+
+COPY . /app
 
 RUN npm i --location=global serve@14.2.1
 
-RUN npm i --omit=dev
+ENV NODE_ENV=production
+
+RUN chown -R node:node /app
+
+USER node
 
 EXPOSE 3000
 

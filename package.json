@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@monaco-editor/react": "4.6.0",
-    "marked": "15.0.3",
+    "marked": "15.0.4",
     "highlight.js": "11.10.0",
     "react-monaco-editor": "0.56.2",
     "react": "19.0.0",
